@@ -243,30 +243,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 9. Quick Tips Modal
-  // --------------------------------------------------------------------------
-  const tipsModal = document.getElementById('tipsModal');
-  const closeTipsBtn = document.getElementById('closeTipsBtn');
-  const gotItBtn = document.getElementById('gotItBtn');
-
-  // Show tips once for first-time visitors
-  if (!localStorage.getItem('gaurav_resume_tips_seen')) {
-    setTimeout(() => {
-      if (tipsModal) tipsModal.classList.add('show');
-    }, 1200);
-  }
-
-  function hideTips() {
-    if (tipsModal) tipsModal.classList.remove('show');
-    localStorage.setItem('gaurav_resume_tips_seen', 'true');
-  }
-
-  if (closeTipsBtn) closeTipsBtn.addEventListener('click', hideTips);
-  if (gotItBtn) gotItBtn.addEventListener('click', hideTips);
-  if (tipsModal) {
-    tipsModal.addEventListener('click', (e) => {
-      if (e.target === tipsModal) hideTips();
-    });
-  }
 });
