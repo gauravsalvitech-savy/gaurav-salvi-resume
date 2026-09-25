@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyBtns = document.querySelectorAll('.copy-btn');
   const editableEls = document.querySelectorAll('[data-editable]');
 
-  const STORAGE_KEY_DATA = 'gaurav_resume_data_v15';
+  const STORAGE_KEY_DATA = 'gaurav_resume_data_v16';
   const STORAGE_KEY_THEME = 'gaurav_resume_theme_v1';
   const STORAGE_KEY_LAYOUT = 'gaurav_resume_layout_v1';
 
