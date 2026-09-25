@@ -342,6 +342,13 @@ body {
   background: var(--bg-sheet-subtle);
   color: var(--accent-text);
   font-weight: 600;
+/* Admin / Edit Mode Controls */
+.admin-ctrl {
+  display: none !important;
+}
+
+body.can-edit .admin-ctrl {
+  display: inline-flex !important;
 }
 
 /* Edit Mode Toast */

@@ -33,6 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadSavedContent();
 
+  // Show Edit controls only when requested via ?edit=true or #edit
+  const urlParams = new URLSearchParams(window.location.search);
+  const isEditAllowed = urlParams.has('edit') || window.location.hash === '#edit';
+  if (isEditAllowed) {
+    document.body.classList.add('can-edit');
+  }
+
   // --------------------------------------------------------------------------
   // 2. Edit Mode Toggle & Content Editable
   // --------------------------------------------------------------------------

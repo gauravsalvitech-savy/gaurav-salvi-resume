@@ -27,8 +27,8 @@
       </div>
 
       <div class="actions-group">
-        <!-- Edit Mode Toggle -->
-        <button class="btn-ctrl" id="toggleEditBtn" title="Click to edit text directly on the page">
+        <!-- Edit Mode Toggle (Only shown when ?edit=true or admin enabled) -->
+        <button class="btn-ctrl admin-ctrl" id="toggleEditBtn" title="Click to edit text directly on the page">
           <i class="fa-solid fa-pen-to-square"></i>
           <span>Edit Mode</span>
         </button>
@@ -60,7 +60,7 @@
         </button>
 
         <!-- Data Reset / Backup -->
-        <button class="btn-ctrl btn-icon-only" id="resetDataBtn" title="Reset edited changes to default">
+        <button class="btn-ctrl btn-icon-only admin-ctrl" id="resetDataBtn" title="Reset edited changes to default">
           <i class="fa-solid fa-rotate-left"></i>
         </button>
       </div>
