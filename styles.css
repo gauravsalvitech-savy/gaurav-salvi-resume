@@ -1565,7 +1565,7 @@ body.edit-mode [data-editable]:focus {
   }
 
   @page {
-    size: A4 portrait;
+    size: auto;
     margin: 4mm 6mm;
   }
 
@@ -1755,6 +1755,10 @@ body.edit-mode [data-editable]:focus {
     font-weight: 700 !important;
   }
 
+  #contactStatus {
+    grid-column: span 2 !important;
+  }
+
   /* Metrics Ribbon */
   .metrics-ribbon {
     display: grid !important;
@@ -1856,6 +1860,8 @@ body.edit-mode [data-editable]:focus {
   .timeline-container {
     padding-left: 0.6rem !important;
     gap: 0.4rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   .timeline-container::before {
@@ -1921,6 +1927,8 @@ body.edit-mode [data-editable]:focus {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 0.35rem 0.45rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   .project-card {
@@ -1990,6 +1998,8 @@ body.edit-mode [data-editable]:focus {
     display: flex !important;
     flex-direction: column !important;
     gap: 0.35rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   .skill-category,
