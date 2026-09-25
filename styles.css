@@ -1115,26 +1115,31 @@ a.contact-val:hover {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
 }
 
 .strengths-list li {
   font-size: 0.85rem;
   color: var(--text-secondary);
-  line-height: 1.5;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.55rem;
+  line-height: 1.55;
+  position: relative;
+  padding-left: 1.45rem;
+  display: block;
 }
 
 .strengths-list li i {
+  position: absolute;
+  left: 0;
+  top: 0.18rem;
   color: #10b981;
-  font-size: 0.92rem;
-  margin-top: 0.2rem;
+  font-size: 0.88rem;
 }
 
 .strengths-list li strong {
   color: var(--text-primary);
+  font-weight: 600;
 }
 
 /* Languages */
