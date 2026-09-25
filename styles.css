@@ -464,26 +464,9 @@ body.edit-mode .edit-toast {
   flex: 1;
 }
 
-/* Header QR Code Badge */
+/* Header QR Code Badge - Hidden on live website (since visitor is already on the site), but displayed in Print/PDF */
 .header-qr-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  padding: 0.5rem 0.65rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  gap: 0.3rem;
-  flex-shrink: 0;
-  transition: all var(--transition-fast);
-}
-
-.header-qr-card:hover {
-  border-color: var(--border-accent);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--accent-glow);
+  display: none;
 }
 
 .qr-img-box {
