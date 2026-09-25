@@ -1513,9 +1513,9 @@ body.edit-mode [data-editable]:focus {
 }
 
 /* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
+   RESPONSIVE MEDIA QUERIES (SCREEN ONLY)
    ========================================================================== */
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .resume-body-layout {
     grid-template-columns: 1fr;
   }
@@ -1538,7 +1538,7 @@ body.edit-mode [data-editable]:focus {
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .control-bar-inner {
     flex-direction: column;
     align-items: stretch;
@@ -1617,7 +1617,7 @@ body.edit-mode [data-editable]:focus {
     display: none !important;
   }
 
-  /* Header Section */
+  /* Header Section: Avatar Left | Details Middle | QR Code Right (Matches Website) */
   .resume-header {
     border-bottom: 1.5px solid #e2e8f0 !important;
     padding-bottom: 0.45rem !important;
@@ -1626,18 +1626,23 @@ body.edit-mode [data-editable]:focus {
 
   .header-main {
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
-    gap: 0.8rem !important;
+    flex-wrap: nowrap !important;
+    gap: 1rem !important;
     margin-bottom: 0.4rem !important;
   }
 
   .avatar-badge {
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    flex-shrink: 0 !important;
     border-radius: 8px !important;
     background: linear-gradient(135deg, #4f46e5, #3b82f6) !important;
     display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .avatar-initials {
