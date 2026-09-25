@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-layout="modern">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaurav Ashok Salvi | Technical Support Engineer & E2E Testing Specialist (20+ Apps, Postman, AI Tooling)</title>
+  <meta name="description" content="Resume of Gaurav Ashok Salvi - 4+ Years Experience in Technical Application Support & E2E Testing for 20+ Commercial Apps across Shopify, WooCommerce, BigCommerce, Wix, Postman API Testing, and AI Tooling Extensions (Groq, OpenRouter).">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Action / Control Bar (Hidden during Print) -->
+  <aside class="control-bar no-print" id="controlBar" aria-label="Resume Controls">
+    <div class="control-bar-inner">
+      <div class="brand-tag">
+        <span class="pulse-dot"></span>
+        <span class="brand-text"><strong>Gaurav's Resume</strong> <small class="status-pill">Interactive & Printable</small></span>
+      </div>
+
+      <div class="actions-group">
+        <!-- Edit Mode Toggle -->
+        <button class="btn-ctrl" id="toggleEditBtn" title="Click to edit text directly on the page">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>Edit Mode</span>
+        </button>
+
+        <!-- Theme Selector -->
+        <div class="theme-dropdown-wrapper">
+          <button class="btn-ctrl" id="themeBtn" title="Change Visual Theme">
+            <i class="fa-solid fa-palette"></i>
+            <span>Theme</span>
+          </button>
+          <div class="dropdown-menu" id="themeMenu">
+            <button data-set-theme="dark" class="dropdown-item active"><i class="fa-solid fa-moon"></i> Cyber Dark</button>
+            <button data-set-theme="light" class="dropdown-item"><i class="fa-solid fa-sun"></i> Clean White</button>
+            <button data-set-theme="executive" class="dropdown-item"><i class="fa-solid fa-briefcase"></i> Executive Slate</button>
+            <button data-set-theme="emerald" class="dropdown-item"><i class="fa-solid fa-gem"></i> Emerald Forest</button>
+          </div>
+        </div>
+
+        <!-- Layout Selector -->
+        <button class="btn-ctrl" id="toggleLayoutBtn" title="Switch between Two-Column and Single-Column layout">
+          <i class="fa-solid fa-table-columns"></i>
+          <span id="layoutText">Classic Layout</span>
+        </button>
+
+        <!-- PDF / Print Action -->
+        <button class="btn-ctrl btn-primary" id="printPdfBtn" title="Download ATS-Friendly Printable PDF">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Export PDF / Print</span>
+        </button>
+
+        <!-- Data Reset / Backup -->
+        <button class="btn-ctrl btn-icon-only" id="resetDataBtn" title="Reset edited changes to default">
+          <i class="fa-solid fa-rotate-left"></i>
+        </button>
+      </div>
+    </div>
+    <div class="edit-toast" id="editToast">
+      <i class="fa-solid fa-circle-check"></i> <strong>Edit Mode Active:</strong> Click any text to modify it. Changes save automatically!
+    </div>
+  </aside>
+
+  <!-- Main Resume Sheet Container -->
+  <main class="resume-wrapper">
+    <div class="resume-sheet" id="resumeContent">
+      
+      <!-- Top Header Section -->
+      <header class="resume-header">
+        <div class="header-main">
+          <div class="avatar-badge">
+            <span class="avatar-initials" contenteditable="false">GS</span>
+            <div class="avatar-status-badge" title="Available for immediate opportunities">
+              <span class="online-indicator"></span>
+            </div>
+          </div>
+          
+          <div class="header-text">
+            <div class="name-row">
+              <h1 class="candidate-name" data-editable="candidate-name">Gaurav Ashok Salvi</h1>
+              <span class="badge-role" data-editable="role-badge">4+ Years Experience &bull; 20+ Apps &bull; Support &bull; QA &bull; Dev</span>
+            </div>
+            <h2 class="candidate-title" data-editable="candidate-title">
+              Technical Support Engineer &bull; E2E &amp; API Testing (Postman) &bull; E-Commerce Specialist &bull; AI &amp; Internal Tooling
+            </h2>
+            <p class="candidate-tagline" data-editable="candidate-tagline">
+              Delivering Tier 2/3 Technical Support &amp; End-to-End Testing for a portfolio of <strong>20+ commercial e-commerce apps</strong> across Shopify, WooCommerce, BigCommerce &amp; Wix, paired with API testing (Postman), custom AI extensions for live chat and task tracking (Groq / OpenRouter), and internal ticketing tool enhancements.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact & Links Bar -->
+        <div class="contact-grid">
+          <div class="contact-item" id="contactEmail">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="contact-val" data-editable="contact-email">gauravsalvi917@gmail.com</span>
+            <button class="copy-btn no-print" data-copy="gauravsalvi917@gmail.com" title="Copy email"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="contact-item" id="contactPhone">
+            <i class="fa-solid fa-phone"></i>
+            <span class="contact-val" data-editable="contact-phone">+91 7666548939</span>
+            <button class="copy-btn no-print" data-copy="+91 7666548939" title="Copy phone"><i class="fa-regular fa-copy"></i></button>
+          </div>
+          <div class="contact-item" id="contactLocation">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="contact-val" data-editable="contact-location">Mumbai, Maharashtra, India</span>
+          </div>
+          <div class="contact-item" id="contactDegree">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span class="contact-val" data-editable="contact-degree">B.Sc. in Information Technology</span>
+          </div>
+          <div class="contact-item" id="contactLinkedin">
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://linkedin.com/in/gaurav-salvi" target="_blank" rel="noopener noreferrer" class="contact-val" data-editable="contact-linkedin">linkedin.com/in/gaurav-salvi</a>
+          </div>
+          <div class="contact-item" id="contactGithub">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/gauravsalvitech-savy" target="_blank" rel="noopener noreferrer" class="contact-val" data-editable="contact-github">github.com/gauravsalvitech-savy</a>
+          </div>
+          <div class="contact-item contact-item-reviews" id="contactReviews" title="Click to view 5-Star Merchant Reviews">
+            <i class="fa-solid fa-star" style="color: #f59e0b;"></i>
+            <span class="contact-val highlight-gold" id="headerReviewsBtn">5.0 ★ Publicly Commended</span>
+          </div>
+          <div class="contact-item" id="contactStatus">
+            <i class="fa-solid fa-bolt"></i>
+            <span class="contact-val highlight-val" data-editable="contact-status">Open to Support, QA & Dev roles</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Key Impact Metrics Bento Ribbon -->
+      <section class="metrics-ribbon" aria-label="Key Impact Metrics">
+        <div class="metric-card">
+          <div class="metric-num">4+ <small>Years</small></div>
+          <div class="metric-label">Support &amp; QA Experience</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">20+ <small>Apps</small></div>
+          <div class="metric-label">Shopify &amp; Multi-Platform Suite</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">&gt;95% <small>CSAT</small></div>
+          <div class="metric-label">Verified 5★ Merchant Praise</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">35%+ <small>Faster</small></div>
+          <div class="metric-label">AI Tooling &amp; E2E Testing QA</div>
+        </div>
+      </section>
+
+      <!-- Resume Body (Dynamic Grid Layout) -->
+      <div class="resume-body-layout">
+        
+        <!-- Primary Left/Main Column -->
+        <div class="layout-column column-main">
+          
+          <!-- Professional Summary -->
+          <section class="resume-section" id="sectionSummary">
+            <div class="section-heading">
+              <div class="heading-icon"><i class="fa-solid fa-user-tie"></i></div>
+              <h3>Professional Summary</h3>
+            </div>
+            <div class="section-content">
+              <p class="summary-paragraph" data-editable="summary-text">
+                Results-driven and technically versatile <strong>Technical Support Engineer & QA Specialist</strong> with <strong>4 years of dedicated experience</strong> supporting and end-to-end (E2E) testing a portfolio of <strong>20+ published commercial applications</strong> across <strong>Shopify, BigCommerce, WooCommerce, and Wix</strong>. Expert in root cause analysis (RCA), network payload inspection, and REST API testing with <strong>Postman</strong>, combined with UI/E2E test automation using <strong>Playwright</strong>. Strong development foundation in <strong>React, Python (FastAPI), Node.js, PostgreSQL, HTML5, and CSS3</strong>, contributing core enhancements to in-house tooling and engineering custom <strong>AI extensions for Intrackr & support workflows</strong> (powered by Groq & OpenRouter models). Proficient in leveraging modern AI developer agents (Composer, Gemini Flash, Claude Code, Codex, GPT) to accelerate diagnostics, tooling development, and testing.
+              </p>
+            </div>
+          </section>
+
+          <!-- Work Experience -->
+          <section class="resume-section" id="sectionExperience">
+            <div class="section-heading">
+              <div class="heading-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <h3>Work Experience</h3>
+              <span class="section-meta-pill">4 Years &bull; 20+ Apps Portfolio</span>
+            </div>
+
+            <div class="timeline-container">
+              
+              <!-- Role: Thalia Technologies -->
+              <article class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-header">
+                  <div>
+                    <h4 class="job-title" data-editable="job1-title">Technical Support Engineer &amp; E2E Testing Specialist</h4>
+                    <div class="job-company" data-editable="job1-company">Thalia Technologies Pvt Ltd</div>
+                  </div>
+                  <div class="job-meta">
+                    <span class="job-date" data-editable="job1-date"><i class="fa-regular fa-calendar-days"></i> July 4, 2022 &ndash; Present</span>
+                    <span class="job-location" data-editable="job1-loc"><i class="fa-solid fa-location-pin"></i> Mumbai, India</span>
+                  </div>
+                </div>
+
+                <div class="job-tags no-print">
+                  <span class="pill-tag">20+ E-Commerce Apps</span>
+                  <span class="pill-tag">End-to-End Testing</span>
+                  <span class="pill-tag">Postman API Testing</span>
+                  <span class="pill-tag">AI Chat &amp; Task Extensions</span>
+                  <span class="pill-tag">Groq &amp; OpenRouter Models</span>
+                  <span class="pill-tag">JavaScript / HTML / CSS</span>
+                  <span class="pill-tag">Shopify / Woo / BigCommerce / Wix</span>
+                  <span class="pill-tag">Internal Tooling Dev</span>
+                </div>
+
+                <ul class="job-bullets" data-editable="job1-bullets">
+                  <li><strong>Multi-Platform App Support (20+ Apps):</strong> Primary technical specialist delivering Tier-2 and Tier-3 support across <strong>20+ published commercial apps</strong> on Shopify, BigCommerce, WooCommerce, and Wix, maintaining a <strong>98%+ SLA adherence</strong> and <strong>>95% CSAT</strong>.</li>
+                  <li><strong>Customer Support &amp; Direct Merchant Recognition:</strong> Delivered empathetic, high-speed troubleshooting that earned <strong>multiple 5-star public reviews on official Shopify App Store listings</strong>, with international merchants specifically commending my name for excellence. <button class="inline-review-btn no-print" id="openReviewsBtn" title="View verified merchant reviews"><i class="fa-solid fa-star"></i> <span>View Selected Reviews</span></button></li>
+                  <li><strong>End-to-End (E2E) &amp; API Testing:</strong> Executed comprehensive end-to-end testing across multi-store environments for new app releases, verifying merchant onboarding, storefront widgets, and checkout compatibility. Authored structured <strong>Postman API test collections</strong> to validate endpoint payloads, status codes, token auth, and webhook sync events.</li>
+                  <li><strong>AI Extensions &amp; Internal Tooling Development:</strong> Engineered custom AI browser extensions for <strong>Intrackr</strong> (task tracker) and <strong>Live Support Chat</strong> integrating <strong>Groq &amp; OpenRouter LLM models</strong> to generate instant ticket summaries and smart reply drafts. Contributed frontend and backend feature enhancements to internal ticketing tools, accelerating team issue resolution.</li>
+                  <li><strong>E-Commerce Integration Triage &amp; Escalation:</strong> Diagnosed inventory synchronization discrepancies, order sync failures, and fulfillment tracking issues for flagship apps (including <strong>Spreadr</strong>, <strong>Amazon Connector FBA</strong>, and <strong>Amazon MCF by Shiprr</strong>); validated root causes via diagnostic endpoints/links and escalated verified technical bugs with reproduction data directly to development teams.</li>
+                  <li><strong>Storefront Code &amp; Theme Fixes:</strong> Debugged frontend CSS/JavaScript layout conflicts, Shopify Liquid theme overrides, and AJAX cart bypass issues across legacy and modern Theme 2.0 architectures for <strong>Outlink (External Link Button)</strong> and catalog tools.</li>
+                  <li><strong>Incident Management &amp; Root Cause Analysis (RCA):</strong> Inspected Chrome DevTools network payloads, server logs, database records, and JSON error responses to isolate edge-case bugs, producing detailed reproducible defect tickets in Jira.</li>
+                </ul>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- Featured Key Projects & Apps Supported -->
+          <section class="resume-section" id="sectionProjects">
+            <div class="section-heading">
+              <div class="heading-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h3>Apps Supported & Key Technical Projects</h3>
+            </div>
+
+            <div class="projects-grid">
+              
+              <!-- App 1: Spreadr & Outlink -->
+              <div class="project-card">
+                <div class="project-header">
+                  <h4 class="project-title" data-editable="proj1-title">Spreadr &amp; Outlink</h4>
+                  <div class="project-links">
+                    <a href="https://apps.shopify.com/amazon-to-shopify" target="_blank" rel="noopener noreferrer" class="app-redirect-btn" title="View Spreadr on Shopify App Store">
+                      <span>Spreadr</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://apps.shopify.com/external-affiliate-product-links" target="_blank" rel="noopener noreferrer" class="app-redirect-btn" title="View Outlink on Shopify App Store">
+                      <span>Outlink</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <span class="project-badge">Shopify / Woo / Wix</span>
+                  </div>
+                </div>
+                <p class="project-desc" data-editable="proj1-desc">
+                  Supported top-ranking Amazon import & affiliate apps. Resolved storefront theme conflicts (Liquid, Theme 2.0 app embeds, cart bypass), automated price/currency conversions, product variant mapping, and affiliate tag tracking.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">Shopify Liquid</span>
+                  <span class="tech-tag">Theme 2.0 Embeds</span>
+                  <span class="tech-tag">JavaScript / DOM</span>
+                  <span class="tech-tag">Amazon Affiliate API</span>
+                </div>
+              </div>
+
+              <!-- App 2: Amazon Connector FBA & Amazon MCF by Shiprr -->
+              <div class="project-card">
+                <div class="project-header">
+                  <h4 class="project-title" data-editable="proj2-title">Amazon Connector &amp; Shiprr</h4>
+                  <div class="project-links">
+                    <a href="https://apps.shopify.com/connectr-for-amazon-sellers" target="_blank" rel="noopener noreferrer" class="app-redirect-btn" title="View Connectr for Amazon Sellers on Shopify App Store">
+                      <span>Connectr (FBA)</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://apps.shopify.com/amazon-fba-shipr" target="_blank" rel="noopener noreferrer" class="app-redirect-btn" title="View Shipr Amazon FBA MCF on Shopify App Store">
+                      <span>Shipr (MCF)</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <span class="project-badge">Fulfillment &amp; Logistics</span>
+                  </div>
+                </div>
+                <p class="project-desc" data-editable="proj2-desc">
+                  Investigated and triaged merchant integration issues syncing store orders with Amazon FBA and MCF fulfillment. Diagnosed real-time stock sync mismatches and carrier tracking callback gaps using diagnostic tools and API endpoints, escalating reproducible bug reports to engineering.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">Amazon SP-API</span>
+                  <span class="tech-tag">FBA / MCF Logistics</span>
+                  <span class="tech-tag">REST Webhooks</span>
+                  <span class="tech-tag">Postman</span>
+                </div>
+              </div>
+
+              <!-- App 3: Intrackr & Live Chat AI Extensions & Support Desk -->
+              <div class="project-card">
+                <div class="project-header">
+                  <h4 class="project-title" data-editable="proj3-title">Support Desk &amp; AI Extensions (Intrackr &amp; Live Chat)</h4>
+                  <div class="project-links">
+                    <a href="https://supportdesk.thalia-apps.com/" target="_blank" rel="noopener noreferrer" class="app-redirect-btn" title="View Support Desk Portal">
+                      <span>Support Desk</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://intrackr.thalia-apps.com/" target="_blank" rel="noopener noreferrer" class="app-redirect-btn" title="View Intrackr Portal">
+                      <span>Intrackr</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <span class="project-badge">AI &amp; Internal Tooling</span>
+                  </div>
+                </div>
+                <p class="project-desc" data-editable="proj3-desc">
+                  Engineered custom AI-powered browser extensions for Intrackr and Live Support Chat using Groq AI &amp; OpenRouter API models for automated ticket summaries and response drafting. Developed custom UI features, auto-routing rules, and status filters for the internal Support Desk ticketing system.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">Groq AI / OpenRouter</span>
+                  <span class="tech-tag">JavaScript / Extensions</span>
+                  <span class="tech-tag">Internal Tooling</span>
+                  <span class="tech-tag">React / Python</span>
+                  <span class="tech-tag">REST APIs</span>
+                </div>
+              </div>
+
+              <!-- Project 4: Multi-App E2E QA & API Test Suite -->
+              <div class="project-card">
+                <div class="project-header">
+                  <h4 class="project-title" data-editable="proj4-title">Multi-App End-to-End (E2E) QA &amp; API Test Suite</h4>
+                  <span class="project-badge">E2E QA &amp; Testing</span>
+                </div>
+                <p class="project-desc" data-editable="proj4-desc">
+                  Coordinated and executed end-to-end test scenarios and comprehensive API test suites in Postman to validate critical user journeys across merchant stores (app installation, theme embed injection, webhook callbacks, order sync, and checkout flows).
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">End-to-End (E2E) Testing</span>
+                  <span class="tech-tag">Postman API Testing</span>
+                  <span class="tech-tag">REST APIs</span>
+                  <span class="tech-tag">Regression QA</span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Secondary Right/Sidebar Column -->
+        <div class="layout-column column-sidebar">
+          
+          <!-- Core Skills & Competencies -->
+          <section class="resume-section" id="sectionSkills">
+            <div class="section-heading">
+              <div class="heading-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Skills & Competencies</h3>
+            </div>
+
+            <div class="skills-category-group">
+              
+              <!-- Category 1: E-Commerce Platforms & Ecosystem -->
+              <div class="skill-category">
+                <h5 class="category-title"><i class="fa-solid fa-store"></i> E-Commerce &amp; Platforms</h5>
+                <div class="tags-cluster" data-editable="skills-ecommerce">
+                  <span class="skill-badge primary">20+ Commercial Apps</span>
+                  <span class="skill-badge primary">Shopify Ecosystem</span>
+                  <span class="skill-badge">WooCommerce</span>
+                  <span class="skill-badge">BigCommerce</span>
+                  <span class="skill-badge">Wix eCommerce</span>
+                  <span class="skill-badge">Amazon SP-API</span>
+                  <span class="skill-badge">Theme 2.0 &amp; Liquid</span>
+                </div>
+              </div>
+
+              <!-- Category 2: QA & Testing -->
+              <div class="skill-category">
+                <h5 class="category-title"><i class="fa-solid fa-vial-circle-check"></i> QA &amp; Testing</h5>
+                <div class="tags-cluster" data-editable="skills-qa">
+                  <span class="skill-badge primary">End-to-End (E2E) Testing</span>
+                  <span class="skill-badge primary">Postman (API Testing)</span>
+                  <span class="skill-badge primary">RESTful APIs</span>
+                  <span class="skill-badge">Manual &amp; Regression QA</span>
+                  <span class="skill-badge">Test Case Design</span>
+                  <span class="skill-badge">Root Cause Analysis</span>
+                  <span class="skill-badge">Jira &amp; Defect Lifecycle</span>
+                </div>
+              </div>
+
+              <!-- Category 3: Development, AI & Tooling -->
+              <div class="skill-category">
+                <h5 class="category-title"><i class="fa-solid fa-code"></i> Development, AI &amp; Tooling</h5>
+                <div class="tags-cluster" data-editable="skills-dev">
+                  <span class="skill-badge primary">AI Extensions (Groq, OpenRouter)</span>
+                  <span class="skill-badge primary">JavaScript (ES6+)</span>
+                  <span class="skill-badge primary">Internal Tooling Dev</span>
+                  <span class="skill-badge">HTML5 &amp; CSS3</span>
+                  <span class="skill-badge">React &amp; Python Basics</span>
+                  <span class="skill-badge">AI Coding Tools (Claude, GPT, Codex)</span>
+                  <span class="skill-badge">Git &amp; GitHub</span>
+                  <span class="skill-badge">Chrome DevTools</span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Education Section -->
+          <section class="resume-section" id="sectionEducation">
+            <div class="section-heading">
+              <div class="heading-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>Education</h3>
+            </div>
+
+            <div class="education-card">
+              <div class="edu-degree" data-editable="edu-degree">Bachelor of Science in Information Technology (B.Sc. IT)</div>
+              <div class="edu-institution" data-editable="edu-inst"><i class="fa-solid fa-building-columns"></i> University of Mumbai / Affiliated College</div>
+              <div class="edu-meta">
+                <span class="edu-year" data-editable="edu-year"><i class="fa-regular fa-calendar"></i> Graduated</span>
+                <span class="edu-field" data-editable="edu-field"><i class="fa-solid fa-book"></i> Core IT & Software Systems</span>
+              </div>
+              <p class="edu-details" data-editable="edu-details">
+                Comprehensive foundation in Software Engineering, Web Technologies, Database Management Systems (DBMS), and Networking principles.
+              </p>
+            </div>
+          </section>
+
+          <!-- Key Strengths & Soft Skills -->
+          <section class="resume-section" id="sectionStrengths">
+            <div class="section-heading">
+              <div class="heading-icon"><i class="fa-solid fa-award"></i></div>
+              <h3>Key Highlights</h3>
+            </div>
+
+            <ul class="strengths-list" data-editable="strengths-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>20+ Commercial Apps Expertise:</strong> 4+ years delivering Tier-2/3 support across high-volume Shopify, WooCommerce, BigCommerce, and Wix applications with rapid multi-platform context switching.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>API &amp; End-to-End (E2E) QA:</strong> Extensive experience executing E2E release test plans and running robust Postman API test collections for contract, authentication, and webhook reliability.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Amazon Ecosystem &amp; SP-API:</strong> Deep technical fluency with FBA inventory sync, MCF logistics, order fulfillment pipelines, and webhooks.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>AI &amp; Internal Tooling Mindset:</strong> Practical experience engineering AI extensions for live chat and task tracking (Groq/OpenRouter) plus feature enhancements for in-house support tools.</li>
+            </ul>
+          </section>
+
+          <!-- Languages -->
+          <section class="resume-section" id="sectionLanguages">
+            <div class="section-heading">
+              <div class="heading-icon"><i class="fa-solid fa-language"></i></div>
+              <h3>Languages</h3>
+            </div>
+            <div class="languages-grid" data-editable="languages-list">
+              <div class="lang-item">
+                <span class="lang-name">English</span>
+                <span class="lang-level">Professional Working</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-name">Hindi</span>
+                <span class="lang-level">Fluent</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-name">Marathi</span>
+                <span class="lang-level">Native / Fluent</span>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+      <!-- Footer for Sheet -->
+      <footer class="resume-sheet-footer">
+        <div class="footer-note" data-editable="footer-text">
+          <span>&bull; Gaurav Ashok Salvi &bull; Technical Support Engineer &amp; E2E Testing Specialist &bull; References available upon request &bull;</span>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Merchant Reviews & Accolades Modal (Hidden by Default) -->
+  <div class="modal-backdrop" id="reviewsModal">
+    <div class="modal-content modal-reviews">
+      <div class="modal-header">
+        <h4><i class="fa-solid fa-star" style="color: #f59e0b;"></i> Customer Feedback &amp; Shopify Reviews</h4>
+        <button class="modal-close" id="closeReviewsBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">Selected 5-star public reviews from international Shopify &amp; e-commerce merchants commending direct support and technical problem resolution:</p>
+        
+        <div class="reviews-list">
+          
+          <!-- Real Verified Review 1: Outlink App / DrCori.com -->
+          <div class="review-card verified-real">
+            <div class="review-header">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <span class="review-app-tag">Outlink &bull; Shopify App Store</span>
+            </div>
+            <p class="review-quote">"Outlink has been great! This app has allowed us to correctly link to our affiliate partners and remain in compliance. <strong>Gaurav was especially helpful in troubleshooting some technical issues very quickly!</strong> Thank you!"</p>
+            <div class="reviewer-footer-row">
+              <div class="reviewer-meta"><strong>DrCori.com</strong> &bull; United States &bull; Verified Merchant</div>
+              <a href="https://apps.shopify.com/external-affiliate-product-links/reviews?sort_by=newest" target="_blank" rel="noopener noreferrer" class="review-live-link" title="Open review on official Shopify App Store">
+                <span>Verify on Shopify</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Real Verified Review 2: Smart Product Descriptions / Flora -->
+          <div class="review-card verified-real">
+            <div class="review-header">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <span class="review-app-tag">Smart Product Descriptions &bull; Shopify App</span>
+            </div>
+            <p class="review-quote">"Works as advertised. Also quick and effective support when necessary. <strong>Gaurav from support reached out and solved the issue that we were having on the Impact theme quickly.</strong>"</p>
+            <div class="reviewer-footer-row">
+              <div class="reviewer-meta"><strong>Flora</strong> &bull; United States &bull; Verified Merchant (1+ Year User)</div>
+              <a href="https://apps.shopify.com/smart-product-descriptions/reviews?sort_by=relevance&page=2" target="_blank" rel="noopener noreferrer" class="review-live-link" title="Open review on official Shopify App Store">
+                <span>Verify on Shopify</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Real Verified Review 3: Prime Product Badges / Greenwood Nursery -->
+          <div class="review-card verified-real">
+            <div class="review-header">
+              <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <span class="review-app-tag">Prime Product Badges &bull; Shopify App</span>
+            </div>
+            <p class="review-quote">"The Badges team is awesome. Each time I have an issue they are there to the rescue. <strong>Many thanks to Gaurav S and the support team.</strong>"</p>
+            <div class="reviewer-footer-row">
+              <div class="reviewer-meta"><strong>Steve Jones</strong> &bull; GreenwoodNursery.com (United States) &bull; Verified Merchant</div>
+              <a href="https://apps.shopify.com/prime-product-badges/reviews?sort_by=newest&page=2" target="_blank" rel="noopener noreferrer" class="review-live-link" title="Open review on official Shopify App Store">
+                <span>Verify on Shopify</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ctrl btn-primary" id="closeReviewsFooterBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Quick Guide Modal (Hidden by Default) -->
+  <div class="modal-backdrop" id="tipsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4><i class="fa-solid fa-circle-info"></i> Resume Tips & Customization</h4>
+        <button class="modal-close" id="closeTipsBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li><strong>To Edit:</strong> Click <em>"Edit Mode"</em> in the top navigation bar. Click anywhere on the resume to change phone, email, bullet points, or skills!</li>
+          <li><strong>To Print or Save as PDF:</strong> Click <em>"Export PDF / Print"</em>. Ensure in print settings that <em>"Background graphics"</em> is checked and margins are set to <em>"Default"</em> or <em>"Minimum"</em> for the cleanest look.</li>
+          <li><strong>Layout Toggle:</strong> Switch between the modern dual-column card format and standard single-column document layout.</li>
+          <li><strong>Auto-Save:</strong> All your edits are saved in your browser storage automatically.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ctrl btn-primary" id="gotItBtn">Got It!</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
